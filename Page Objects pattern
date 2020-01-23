@@ -1,0 +1,12 @@
+[Test]
+public void Successful_Authorization_Test()
+{
+	// arrange
+	AuthorizationPage authorizationPage = homePage.Login();
+	
+	// act
+	authorizationPage.MakeSuccessfulAuthorization();
+
+	// assert
+	authorizationPage.VerifyAuthorization();	
+}
