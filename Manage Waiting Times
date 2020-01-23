@@ -1,0 +1,11 @@
+WebDriver driver = new FirefoxDriver();
+driver.Manage().Timeouts().ImplicitlyWait(10, TimeUnit.SECONDS);
+
+Explicit waits set timeouts to find specific elements in your UI. If some UI elements take longer to be loaded than others - then you should use Explicit waits. For example:
+
+WebDriver driver = new FirefoxDriver();
+driver.Get("http://example.com");
+// wait up to 10 seconds
+WebElement element = (new WebDriverWait(driver, 10))
+// or until an element with Id = “bar” located
+  .Until(ExpectedConditions.PresenceOfElementLocated(By.Id("bar")));
