@@ -1,0 +1,26 @@
+DesiredCapabilities dc = new DesiredCapabilities();
+dc.SetCapability(CapabilityType.BrowserName, "chrome");
+
+RemoteWebDriver driver;
+driver = new RemoteWebDriver(dc);
+
+driver.Url = "https://example.com";
+
+WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+
+IWebElement manualNavLink = wait.Until(d =>d.FindElement(By.XPath("//*[text()='Manual']")));
+
+manualNavLink.Click();
+
+And here is an example of how you can find an element and click on it using Appium driver:
+
+DesiredCapabilities dc = new DesiredCapabilities();
+dc.SetCapability("platformName", "Android");
+dc.SetCapability("app", "com.example.tester.myapplication");
+dc.SetCapability("appActivity", ".MainActivity");
+dc.SetCapability("appVersion", "1.0");
+
+AppiumDriver<AndroidElement> driver;
+driver = new AndroidDriver<AndroidElement>(dc);
+
+driver.FindElement(By.Id("fab")).Click();
