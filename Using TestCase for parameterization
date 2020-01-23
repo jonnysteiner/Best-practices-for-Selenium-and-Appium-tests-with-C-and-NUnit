@@ -1,0 +1,7 @@
+[TestCase(1, 2, ExpectedResult=3)]
+[TestCase(2, 3, ExpectedResult=5)]
+[TestCase(3, 4, ExpectedResult=7)]
+public int SumTest(int x, int y)
+{
+    return x + y;
+}
