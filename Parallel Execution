@@ -1,0 +1,7 @@
+[TestFixture("Android", "6.0.1", "My Description")]
+[TestFixture("iOS", "9.2.1", "Another description")]
+[Parallelizable(ParallelScope.Fixtures)]
+public class MyTestFixture
+{
+    // ...
+}
