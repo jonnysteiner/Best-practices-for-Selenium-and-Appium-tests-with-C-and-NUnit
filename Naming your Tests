@@ -1,0 +1,9 @@
+For example, the following test name is not considered very informative:
+
+[Test]
+public void SortingCheck()
+
+Whereas the following is much better:
+
+[Test]
+public void Items_Table_Check_Sorting_By_Price_Ascending()
