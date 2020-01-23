@@ -1,0 +1,12 @@
+[Test]
+public void Show_10_Items_On_Page()
+{
+	// arrange
+	int itemsOnPage = 10;
+	
+	// act
+	itemsList.SetNumberOfItemsOnPage(itemsOnPage );
+
+	// assert
+	Assert.AreEqual(itemsList.GetNumberOfItemsOnPage(), itemsOnPage);	
+}
